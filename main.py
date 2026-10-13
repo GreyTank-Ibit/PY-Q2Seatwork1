@@ -9,7 +9,7 @@ def checkName(e):
     lastName=document.getElementById("lastName").value
     name=f"{num1} {lastName}"
 
-    confirm_num = any(num1 == first and lastName == last for first, last in zip(firstname, lastname))
+    confirm_num = name in [firstname[i] + " " + lastname[i] for i in range(len(firstname))]
 
     message= (f'I\'m sorry {name}, you aren\'t a member of Math Club!.', f'Yahoo! {name}, you are a member of Math Club!')
 
